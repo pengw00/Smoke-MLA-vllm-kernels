@@ -1,10 +1,15 @@
 #!/bin/bash
 
 pip install --upgrade pip
-pip install vllm flash-attn --no-build-isolation
+pip uninstall -y numpy
+pip install "numpy<2.0.0" vllm flash-attn --no-build-isolation
+
 
 echo "正在安装 vLLM..."
 pip install vllm
+
+export VLLM_LOGGING_LEVEL=DEBUG
+export RAY_LOG_TO_STDERR=1
 
 python -m vllm.entrypoints.openai.api_server \
     --model deepseek-ai/DeepSeek-V2-Lite-Chat \
