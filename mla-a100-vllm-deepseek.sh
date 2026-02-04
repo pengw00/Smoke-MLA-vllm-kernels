@@ -2,7 +2,7 @@
 
 pip install --upgrade pip
 pip uninstall -y numpy
-pip install "numpy<2.0.0" vllm flash-attn --no-build-isolation
+pip install "numpy<2.0,>=1.26.4" vllm flash-attn --no-build-isolation
 
 # 访问 FlashAttention 的 GitHub Releases 页面找到对应 CUDA 和 Torch 版本的链接
 # 或者尝试强制寻找预编译包：
