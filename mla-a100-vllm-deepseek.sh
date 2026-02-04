@@ -11,7 +11,7 @@ python -m vllm.entrypoints.openai.api_server \
     --trust-remote-code \
     --gpu-memory-utilization 0.9 \
     --max-model-len 4096 \
-    --dtype bfloat16 \
+    --dtype half \
     --host 0.0.0.0 \
     --port 8000
 
