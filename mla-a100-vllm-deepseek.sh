@@ -7,7 +7,7 @@ echo "正在安装 vLLM..."
 pip install vllm
 
 python -m vllm.entrypoints.openai.api_server \
-    --model deepseek-ai/DeepSeek-V2-Lite-Chat \
+    --model Qwen/Qwen2-0.5B-Instruct \
     --trust-remote-code \
     --gpu-memory-utilization 0.9 \
     --max-model-len 4096 \
